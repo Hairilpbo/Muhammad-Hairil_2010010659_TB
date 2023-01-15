@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="laporan_gaji2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="115c4b5e-85c2-4640-8d3a-f001948fc4c9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM gaji]]>
+	</queryString>
+	<field name="nip" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jekel" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tempat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tenggal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pendidikan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pangkat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jabatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="masa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gaji" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="88" splitType="Stretch">
+			<image>
+				<reportElement x="15" y="21" width="80" height="65" uuid="29455cd4-1d20-4f39-8529-c8cc7af69bf5"/>
+				<imageExpression><![CDATA["C:\\Users\\User\\Desktop\\java\\logokemensos.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="134" y="19" width="445" height="23" uuid="6139d889-7584-4f55-a51c-7ce3b848e306"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KEMENTRIAN SOSIAL REPUBLIK INDONESIA       ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="42" width="445" height="22" uuid="ffbd40ed-2a27-49f3-baa3-1d3ede3538db"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[          BIRO ORGANISASI DAN KEPEGAWAIAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="64" width="445" height="23" uuid="384d3789-cb9c-45cf-aa58-1826b2be5fe7"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[             Jalan Salemba Raya No. 28, Jakarta Pusat 10430]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="14" y="6" width="525" height="4" backcolor="#000000" uuid="0bbadbb3-2d99-4cc1-98e4-69565911748e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="18" width="525" height="10" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="d917c3fb-5a39-472e-8700-452d7e4e518a"/>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="14" y="0" width="174" height="20" uuid="9e970a0e-37c7-495a-9168-66658ae5cac7"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Perihal : Kenaikan Gaji Berkala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="20" width="143" height="44" uuid="18bbd20f-aeea-4853-b707-003bbff235f5"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Yth. Kepada Kantor Pelayanan Perbendaharaan Negara]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="64" width="174" height="20" uuid="97cc8d2a-910b-4cf6-a10f-cfe940a13cff"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[di JAKARTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="0" width="40" height="20" uuid="d183cf70-404b-4f19-a64e-eb732b3b923e"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="449" y="0" width="100" height="20" uuid="5255a54b-23e7-425c-a15f-644d5b7da149"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="368" splitType="Stretch">
+			<staticText>
+				<reportElement x="32" y="79" width="90" height="22" backcolor="#000000" uuid="bfd2e32a-5142-485d-9810-f9a043cd892d"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2.	Nama                             :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="127" width="156" height="23" backcolor="#000000" uuid="86eb7a0d-9fdb-4b48-b32a-443f1e992c04"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[4.	Tempat, Tanggal Lahir     :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="103" width="126" height="23" backcolor="#000000" uuid="e100d49a-1d31-4d3d-b3bc-6e4f86ef2dcc"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.	Jenis Kelamin                 :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="216" width="132" height="21" backcolor="#000000" uuid="3bef3b2a-9233-4ab3-8dc6-7bbf7372e151"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[7.	Pangkat/Golongan          :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="237" width="90" height="23" backcolor="#000000" uuid="e01ebb09-cfcb-4e02-b5d4-296b38b3ad0e"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[8.	Jabatan                         :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="260" width="112" height="23" backcolor="#000000" uuid="91cbeb12-cdf0-4cd2-9e4a-c130477f222f"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[9.	Masa Kerja                    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="57" width="68" height="21" backcolor="#000000" uuid="f0bea31d-bd9c-46e5-b7d0-7a50d8fbb744"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1.	NIP              	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="283" width="110" height="23" backcolor="#000000" uuid="00dbc4d3-f289-4592-b567-dd5c77a79704"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[10.	Gaji Pokok                    :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="55" width="252" height="21" uuid="1654784f-3689-4b79-b9f3-d72ddf360197"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="79" width="252" height="20" uuid="fcdfcf43-c801-4fed-b82b-15b2afa34091"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="102" width="252" height="21" uuid="53b77095-9e6c-4720-92b3-80eababe2dba"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jekel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="126" width="81" height="23" uuid="931a1bd2-a9e5-422d-8f18-09e9fc41aada"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tempat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="151" width="252" height="19" uuid="6dfcf4d2-34e7-455f-a96b-d0d0dcc70cd3"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pendidikan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="216" width="252" height="21" uuid="019a85bc-382f-4998-8670-2fcae102f077"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pangkat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="237" width="252" height="23" uuid="b87094b0-8d0d-4d16-b339-1e0618ba5eb8"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jabatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="261" width="252" height="23" uuid="b11af498-84d1-47c9-b48e-10836a9b3cc7"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{masa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="284" width="252" height="23" uuid="b8c419d4-f2d9-4467-8e6a-da2e21b0d7bf"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gaji}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="126" width="147" height="23" uuid="7df7eeef-938b-494b-aadf-ea1507a86190"/>
+				<textElement>
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tenggal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="204" y="55" width="10" height="23" backcolor="#000000" uuid="f8912218-879d-4ae8-a372-11f2403588ca"/>
+				<textElement>
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="78" width="10" height="23" backcolor="#000000" uuid="3e0c5b0e-c192-4135-a993-7b4ea703bbd2"/>
+				<textElement>
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="102" width="10" height="23" backcolor="#000000" uuid="7a169ec7-2e7e-4dd5-b8bd-23cc2ea84a2e"/>
+				<textElement>
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="126" width="10" height="23" backcolor="#000000" uuid="5220fd4d-79e7-416e-8568-1e9f6461c793"/>
+				<textElement>
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="151" width="10" height="20" backcolor="#000000" uuid="921863d7-9db1-4c11-a2f9-dc183110935a"/>
+				<textElement>
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="237" width="10" height="23" backcolor="#000000" uuid="f481cef0-9d79-4df3-ba59-46a6110c6200"/>
+				<textElement>
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="260" width="10" height="23" backcolor="#000000" uuid="1b7f5a4f-d370-4ddb-b7c6-df14a161bf94"/>
+				<textElement>
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="214" width="10" height="23" backcolor="#000000" uuid="16087d5e-5e6d-4cd3-8375-9776258e844d"/>
+				<textElement>
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="283" width="10" height="23" backcolor="#000000" uuid="de85f412-dc9b-4c9d-b0e5-d454a8320bbb"/>
+				<textElement>
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="174" width="403" height="19" uuid="979a22c9-0bb9-4b0c-8464-8af827b46a1d"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Atas dasar Surat Keputusan terakhir tentang gaji/pangkat yang ditetapkan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="127" width="10" height="23" backcolor="#000000" uuid="73507121-91a5-4543-968a-802dc75fa926"/>
+				<textElement>
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="151" width="112" height="21" backcolor="#000000" uuid="4e205be7-6d24-4fe7-a062-6f4d72b6f28c"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[5.	Pendidikan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="323" width="524" height="38" uuid="f49903c8-b7f5-493c-88e4-87eeb5adc737"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Diharapkan agar sesuai dengan Peraturan Pemerintah Nomor 15 Tahun 2019 kepada Pegawai tersebut dapat dibayarkan penghasilannya berdasarkan gaji pokok baru.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="12" width="508" height="43" uuid="0cf9dafd-4acf-4a21-bb5b-c67d42287260"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Dengan ini diberitahukan bahwa pegawai sudah memenuhi masa kerja dan syarat - syarat lainnya kepada :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="195" width="112" height="21" backcolor="#000000" uuid="4c01d65a-ade6-4d28-9fea-ad11b036a251"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[6.	Oleh Pejabat ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="194" width="10" height="20" backcolor="#000000" uuid="41e72bb1-9780-4ec1-903c-076d09df6dc9"/>
+				<textElement>
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="194" width="112" height="21" backcolor="#000000" uuid="ab49b486-a7ad-4730-8e8f-0117eaa9a17b"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Menteri Sosial RI]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="190" splitType="Stretch">
+			<staticText>
+				<reportElement x="349" y="39" width="190" height="31" uuid="147b5cc0-d98f-47c3-9d8d-291d91e8395d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[An. KEPALA BIRO ORGANISASI DAN KEPEGAWAIAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="143" width="107" height="19" uuid="af37a145-c084-43b0-a838-ff03ff02c7d1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ARMAY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="164" width="163" height="19" uuid="6b490fc3-6ced-473a-bc6b-adb832cecf15"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIP. 19590406198031002]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="4" width="296" height="21" uuid="ebca6756-ae52-4c9c-bf3f-63a90c68332d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[TEMBUSAN surat ini disampaikan kepada Yth. :   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="25" width="296" height="21" uuid="0dc7a5b0-6f36-43eb-98ba-086f6dd01783"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[1. Kepala Badan Kepegawaian  Negara di Jakarta;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="46" width="296" height="21" uuid="c2acc047-6ade-48af-a0e0-96a542c2bd9e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[2. Kepala Biro Organisasi dan Kepegawaian;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="67" width="296" height="21" uuid="351a7ceb-2c59-4041-8300-87231c8c9d03"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[3. Kepala Bagian Perbendaharaan ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="88" width="296" height="21" uuid="38fcc9e2-3924-4903-b318-2eb85257238b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[(Sub. Bagian Gaji dan Perjalanan Dinas)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="110" width="296" height="21" uuid="d3c03c1b-ccb4-44ba-bdb6-8a6abacc33fe"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[4. Pegawai bersangkutan;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="130" width="296" height="21" uuid="5aa4fd16-c693-411d-b784-eb2d9611611d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[5. A r s i p.]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="40" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="21" splitType="Stretch"/>
+	</summary>
+</jasperReport>
